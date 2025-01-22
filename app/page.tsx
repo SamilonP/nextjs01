@@ -18,7 +18,7 @@ export default function Home() {
       setMessage(e.target.value)
     }
   }
-
+ 
   function checkNumber() {
     if (Number(message) > randomNum) {
       setGuess(guesses + 1)
