@@ -1,5 +1,5 @@
 export default function Home() {
-  async function saveAction(formData) {
+  async function saveAction(formData: FormData) {
     "use server"
     console.log(formData.get("name")
      + "\n" + formData.get("email")
