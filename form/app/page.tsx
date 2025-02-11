@@ -10,35 +10,35 @@ export default function Home() {
   }
   
   return (
-    <div className="container">
+    <div className="container h-screen flex justify-center items-center">
       <div className="text-container">
         <h2>Send a message</h2>
         <p>Input the required info and give us a message!</p>
       </div>
 
-      <div className="form-container">
+      <div className="p-10 bg-black flex flex-col text-slate-50">
         <form action={saveAction}>
-          <div id="input-container">
+          <div id="input-container" className="flex flex-col w-full">
             <label htmlFor="name">Username</label>
             <input required placeholder="Nönnönnöö" type="text" name="name"/>
           </div>
-          <div id="input-container">
+          <div id="input-container" className="flex flex-col w-full">
             <label htmlFor="email">E-mail</label>
             <input required type="text" name="email"/>
           </div>
-          <div id="input-container">
+          <div id="input-container" className="flex flex-col w-full">
             <label htmlFor="address">Address</label>
             <input required type="text" name="address"/>
           </div>
-          <div id="input-container">
+          <div id="input-container" className="flex flex-col w-full">
             <label htmlFor="zip">Postal Code</label>
             <input required type="text" name="zip"/>
           </div>
-          <div id="input-container">
+          <div id="input-container" className="flex flex-col w-full">
             <label htmlFor="region">City/Local Region</label>
             <input type="text" name="region"/>
           </div>
-          <div id="input-container">
+          <div id="input-container" className="flex flex-col w-full">
             <label htmlFor="msg">Message</label>
             {/* <input className="message-input" required type="text" name="msg"/> */}
             <textarea name="msg" className="message-input" required cols={5} rows={8}></textarea>
@@ -48,6 +48,8 @@ export default function Home() {
           </div>
         </form> 
       </div>
+
+      
     </div>
   )
 }
