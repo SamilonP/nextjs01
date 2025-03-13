@@ -1,21 +1,12 @@
 export default function Home() {
   async function saveAction(formData: FormData) {
     "use server"
-    console.log(formData.get("name")
-     + "\n" + formData.get("email")
-     + "\n" + formData.get("address")
-     + "\n" + formData.get("zip")
-     + "\n" + formData.get("region")
-     + "\n" + formData.get("msg"))
   }
   
   return (
-    <div className="container h-screen flex justify-center items-center">
-      <div className="text-container">
-        <h2>Send a message</h2>
-        <p>Input the required info and give us a message!</p>
-      </div>
-
+    <div className="container h-screen flex flex-col justify-center items-center bg-gradient-to-r from-blue-950 to-slate-400">
+      <p className="text-white text-5xl m-4">Tailwind CSS</p>
+      <button className="bg-orange-500 p-4 text-white rounded-lg hover:bg-white hover:text-black">Click here!</button>
     </div>
   )
 }
