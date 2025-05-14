@@ -2,16 +2,17 @@
 import React, { useState } from 'react'
 
 
-function Insert() {
+function Insert({ onInsert }) {
   const inputClass = "bg-amber-500 mt-5 mb-5"
   const[title, setTitle] = useState("")
   const[description, setDescription] = useState("")
   const[image, setImage] = useState("")
+  
   const handleSubmit = async (e) => {
     e.preventDefault()
     const res = await fetch("/api/games", {headers: {"Content-type": "application/json"}, method: "post", body: JSON.stringify({title, description, image})})
     const data = await res.json()
-    console.log(data)
+    onInsert()
   }
 
   return (

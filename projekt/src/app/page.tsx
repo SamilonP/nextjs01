@@ -10,18 +10,19 @@ export default function Home() {
   }
 
   return (
-    <div className="m-0 p-0 box-content">
+    <div className="m-0 p-0 box-content flex flex-col justify-center items-center w-full h-svh">
       <nav className="bg-gray-950">
-        <Link href="/dashboard">gdf</Link>
+        <Link href="/dashboard" className="font-black text-3xl">Go to dashboard</Link>
         {session?.user && (
-        <div>
-          <h2>{session.user.name}</h2>
-          <p>{session.user.email}</p>
+        <div className="mt-3">
           <img src={session.user.image || ''} alt="profile" />
+          <p className="text-3x1 font-mono decoration-double">{session.user.name}</p>
+          <p>{session.user.email}</p>
+          <p>login feature actually has no use lolololol</p>
         </div>
       )}
       </nav>
-      <button onClick={handleSignIn}>Sign in n i n</button>
+      { !session && <button onClick={handleSignIn}>Sign in and go to dashboard</button> }
     </div>
   );
 }
